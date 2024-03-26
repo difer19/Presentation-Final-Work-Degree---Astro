@@ -1,0 +1,67 @@
+---
+const menuItems = [
+  { name: 'Inicio', link: '#inicio' },
+  { name: 'Documentación', link: '#documentacion' },
+  { name: 'Ejemplos', link: '#ejemplos' },
+  { name: 'API', link: '#api' },
+  { name: 'Comunidad', link: '#comunidad' },
+  { name: 'Contacto', link: '#contacto' },
+  { name: 'Inicio', link: '#inicio' },
+  { name: 'Documentación', link: '#documentacion' },
+  { name: 'Ejemplos', link: '#ejemplos' },
+  { name: 'API', link: '#api' },
+  { name: 'Comunidad', link: '#comunidad' },
+  { name: 'Contacto', link: '#contacto' },
+  { name: 'Inicio', link: '#inicio' },
+  { name: 'Documentación', link: '#documentacion' },
+  { name: 'Ejemplos', link: '#ejemplos' },
+  { name: 'API', link: '#api' },
+  { name: 'Comunidad', link: '#comunidad' },
+  { name: 'Contacto', link: '#contacto' }
+];
+---
+
+<nav id="navbar" class="xl:hidden bg-white shadow-md"></button>
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between items-center py-3 md:py-4">
+      <div class="flex">
+        <button id="menuButton" class="xl:hidden block focus:outline-none bg-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+        <a class="mx-3" href="#">Project</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<aside id="sidebar" class="hidden xl:block w-64 h-screen fixed overflow-y-auto rounded-lg shadow bg-gray-50 dark:bg-gray-800">
+    <a id="textTitle" class="flex solid border-b-2 border-gray-200 px-4 py-3 font-bold" href="">Project</a>
+    <div class="py-4 px-1 mx-1">
+        <ul class="space-y-2 ">
+            {menuItems.map((item) => (
+                <li>
+                    <a href={item.link} class="flex items-center px-4 py-1 text-base text-gray-900 rounded-lg hover:bg-sky-100">
+                        {item.name}
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </div>
+</aside>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menuButton');
+    const sidebar = document.getElementById('sidebar');
+    const textTitle = document.getElementById('textTitle');
+
+    if (menuButton && sidebar && textTitle) {
+      
+      menuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('hidden');
+        textTitle.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
