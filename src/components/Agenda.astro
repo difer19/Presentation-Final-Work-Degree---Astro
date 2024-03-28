@@ -1,0 +1,78 @@
+---
+import Item from "./ItemAgenda.jsx";
+
+const itemsAgenda = [
+  {
+    number: "1.",
+    name: "Introduccion.",
+    url: "https://www.udenar.edu.co/",
+  },
+  {
+    number: "2.",
+    name: "Planteamiento del Problema.",
+    url: "https://www.udenar.edu.co/",
+  },
+  {
+    number: "3.",
+    name: "Justificacion.",
+    url: "https://www.udenar.edu.co/",
+  },
+  {
+    number: "4.",
+    name: "Objetivos.",
+    url: "https://www.udenar.edu.co/",
+  },
+  {
+    number: "5.",
+    name: "Marco Teorico.",
+    url: "https://www.udenar.edu.co/",
+  },
+  {
+    number: "6.",
+    name: "Metodologia.",
+    url: "https://www.udenar.edu.co/",
+  },
+  {
+    number: "7.",
+    name: "Resultados de la Investigacion.",
+    url: "https://www.udenar.edu.co/",
+  },
+  {
+    number: "8.",
+    name: "Conclusiones",
+    url: "https://www.udenar.edu.co/",
+  },
+  {
+    number: "9.",
+    name: "Recomendaciones.",
+    url: "https://www.udenar.edu.co/",
+  },
+];
+---
+
+<!-- <div class="mx-16 md:w-2/3 my-16">
+    {itemsAgenda.map((item) => (
+        <Item number={item.number} name={item.name} url={item.url} />
+    ))}
+</div> -->
+<style>
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none; /* Para Safari y Chrome */
+  }
+
+  .scrollbar-hidden {
+    -ms-overflow-style: none; /* IE y Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>
+
+<div
+  class="mx-16 md:w-2/3 my-16 overflow-y-auto scrollbar-hidden bg-transparent p-2"
+  style="max-height: 400px;"
+>
+  {
+    itemsAgenda.map((item) => (
+      <Item number={item.number} name={item.name} url={item.url} />
+    ))
+  }
+</div>
