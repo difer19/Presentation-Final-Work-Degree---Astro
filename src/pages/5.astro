@@ -1,30 +1,58 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import  ListBox  from '../components/ListBox.jsx';
-import { Divider } from '@nextui-org/react';
-import  Search  from '../components/Search.jsx';
-import NextPag from '../components/NextPag.jsx';
-import Header from '../components/Header.astro';
+import Layout from "../layouts/Layout.astro";
+import ListBox from "../components/ListBox.jsx";
+import { Divider } from "@nextui-org/react";
+import Search from "../components/Search.jsx";
+import NextPag from "../components/NextPag.jsx";
+import Header from "../components/Header.astro";
+import ImagesShower from "../components/ImagesShower.jsx";
+import Home from "../components/Home.jsx";
+import CardObject from "../components/CardObject.jsx";
 
-const projectTitle = "Implementación y verificación formal de un algoritmo paralelo basado \
-                        en Minmax aplicado a un juego como caso de estudio usando álgebra de \
-                        procesos concurrentes y mCRL2 "
+const projectTitle =
+  "Implementation And Formal Verification of " +
+  "a Parallel Algorithm Based on Minimax " +
+  "Applied to a Game as a Case Study Using " +
+  "Concurrent Processes Algebra and Mcrl2.";
 
-const section = "Marco"
-const pag = 5
+const section = "Problem";
+const pag = 5;
 ---
 
 <Layout title={projectTitle}>
-	<main>
-		<Header></Header>
-		<Divider></Divider>
-		<aside class="hidden sm:block">
-			<div class="m-4">
-				<Search client:only></Search>
-				<ListBox selectedName = {section} client:only></ListBox>
-				<NextPag current = {pag}></NextPag>
-			</div>
-		</aside>
-		
-	</main>
-</Layout> 
+  <main>
+    <Header />
+    <Divider />
+    <div class="flex">
+        <aside class="hidden sm:block">
+        <div class="m-4">
+            <Search client:only />
+            <ListBox selectedName={section} client:only />
+            <NextPag current={pag} client:only />
+            <Home />
+        </div>
+        </aside>
+        <div>
+        <div class="m-8 text-5xl">
+            <h1>Concurrency/Parallelism</h1>
+            <div class="my-14 mx-24 flex">
+                <div class="mr-4 rounded-md border-black shadow-md p-4">
+                  <ImagesShower
+                    alt="software testing"
+                    url="https://ds6br8f5qp1u2.cloudfront.net/blog/wp-content/uploads/2021/03/7-Common-Types-of-Software-Testing@1x.png?x40138"
+                    client:only
+                  />
+                </div>
+                <div class="mr-4 rounded-md border-black shadow-md p-4">
+                  <ImagesShower
+                    alt="Formal Methods"
+                    url="public/images/formal_method.jpg"
+                    client:only
+                  />
+                </div>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+</Layout>

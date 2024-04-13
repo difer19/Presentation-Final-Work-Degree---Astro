@@ -1,30 +1,61 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import  ListBox  from '../components/ListBox.jsx';
-import { Divider } from '@nextui-org/react';
-import  Search  from '../components/Search.jsx';
-import NextPag from '../components/NextPag.jsx';
-import Header from '../components/Header.astro';
+import Layout from "../layouts/Layout.astro";
+import NavbarNextUI from "../components/NavbarNextUI.jsx";
+import ListBox from "../components/ListBox.jsx";
+import { Divider } from "@nextui-org/react";
+import Search from "../components/Search.jsx";
+import NextPag from "../components/NextPag.jsx";
+import Header from "../components/Header.astro";
+import ImagesShower from "../components/ImagesShower.jsx";
+import Home from "../components/Home.jsx";
 
-const projectTitle = "Implementación y verificación formal de un algoritmo paralelo basado \
+const projectTitle =
+  "Implementación y verificación formal de un algoritmo paralelo basado \
                         en Minmax aplicado a un juego como caso de estudio usando álgebra de \
-                        procesos concurrentes y mCRL2 "
+                        procesos concurrentes y mCRL2 ";
 
-const section = "Metodologia"
-const pag = 6
+const section = "Problem";
+const pag = 6;
 ---
 
 <Layout title={projectTitle}>
-	<main>
-		<Header></Header>
-		<Divider></Divider>
-		<aside class="hidden sm:block">
-			<div class="m-4">
-				<Search client:only></Search>
-				<ListBox selectedName = {section} client:only></ListBox>
-				<NextPag current = {pag}></NextPag>
-			</div>
-		</aside>
-		
-	</main>
-</Layout> 
+  <main>
+    <Header />
+    <Divider />
+    <div class="flex">
+      <aside class="hidden sm:block">
+        <div class="m-4">
+          <Search client:only />
+          <ListBox selectedName={section} client:only />
+          <NextPag current={pag} client:only />
+          <Home></Home>
+        </div>
+      </aside>
+      <div class="m-8 text-5xl">
+        <h1 class="mt-8 text-center">Software Verification</h1>
+        <div class="my-14 mx-24 flex">
+          <div class="mr-4 rounded-md border-black shadow-md p-4">
+            <ImagesShower
+              height="250"
+              width="450"
+              alt="software testing"
+              url="https://ds6br8f5qp1u2.cloudfront.net/blog/wp-content/uploads/2021/03/7-Common-Types-of-Software-Testing@1x.png?x40138"
+              client:only
+            />
+            <h1 class="m-2 text-center text-5xl">Software Testing</h1>
+          </div>
+          <div class="mr-4 rounded-md border-black shadow-md p-4">
+            <ImagesShower
+              height="250"
+              width="450"
+              alt="Formal Methods"
+              url="public/images/formal_method.jpg"
+              client:only
+            />
+            <h1 class="m-2 text-center text-5xl">Formal Methods</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

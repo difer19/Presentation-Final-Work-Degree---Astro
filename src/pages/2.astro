@@ -1,30 +1,52 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import  ListBox  from '../components/ListBox.jsx';
-import { Divider } from '@nextui-org/react';
-import  Search  from '../components/Search.jsx';
-import NextPag from '../components/NextPag.jsx';
-import Header from '../components/Header.astro';
+import Layout from "../layouts/Layout.astro";
+import ListBox from "../components/ListBox.jsx";
+import { Divider } from "@nextui-org/react";
+import Search from "../components/Search.jsx";
+import NextPag from "../components/NextPag.jsx";
+import Header from "../components/Header.astro";
+import ImagesShower from "../components/ImagesShower.jsx";
+import Home from "../components/Home.jsx";
 
-const projectTitle = "Implementación y verificación formal de un algoritmo paralelo basado \
-                        en Minmax aplicado a un juego como caso de estudio usando álgebra de \
-                        procesos concurrentes y mCRL2 "
+const projectTitle = "Implementation And Formal Verification of " + 
+				"a Parallel Algorithm Based on Minimax " +
+				"Applied to a Game as a Case Study Using " +
+				"Concurrent Processes Algebra and Mcrl2."
 
-const section = "Problema"
-const pag = 2
+const section = "Introduction";
+const pag = 2;
 ---
 
 <Layout title={projectTitle}>
-	<main>
-		<Header></Header>
-		<Divider></Divider>
-		<aside class="hidden sm:block">
-			<div class="m-4">
-				<Search client:only></Search>
-				<ListBox selectedName = {section} client:only></ListBox>
-				<NextPag current = {pag}></NextPag>
-			</div>
-		</aside>
-		
-	</main>
-</Layout> 
+  <main>
+    <Header />
+    <Divider />
+    <div class="flex">
+      <aside class="hidden sm:block">
+        <div class="m-4">
+          <Search client:only />
+          <ListBox selectedName={section} client:only />
+          <NextPag current={pag} client:only />
+          <Home></Home>
+        </div>
+      </aside>
+      <div class="m-8 text-5xl">
+        <div class="my-10 mx-16 flex">
+          <div class="mr-8 rounded-md border-black shadow-md p-4">
+            <ImagesShower
+              width=350
+              alt="software testing"
+              url="public/images/dependency.png"
+              class="w-1/2"
+              client:only
+            />
+          </div>
+          <div class="content-center w-1/2">
+            <p class="text-2xl  align-middle">"Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves."</p>
+            <p class="text-2xl text-right align-middle mt-2">Alan Kay</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

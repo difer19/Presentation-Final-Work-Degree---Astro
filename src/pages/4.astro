@@ -1,30 +1,85 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import  ListBox  from '../components/ListBox.jsx';
-import { Divider } from '@nextui-org/react';
-import  Search  from '../components/Search.jsx';
-import NextPag from '../components/NextPag.jsx';
-import Header from '../components/Header.astro';
+import Layout from "../layouts/Layout.astro";
+import ListBox from "../components/ListBox.jsx";
+import { Divider } from "@nextui-org/react";
+import Search from "../components/Search.jsx";
+import NextPag from "../components/NextPag.jsx";
+import Header from "../components/Header.astro";
+import ImagesShower from "../components/ImagesShower.jsx";
+import Home from "../components/Home.jsx";
+import CardObject from "../components/CardObject.jsx";
 
-const projectTitle = "Implementación y verificación formal de un algoritmo paralelo basado \
-                        en Minmax aplicado a un juego como caso de estudio usando álgebra de \
-                        procesos concurrentes y mCRL2 "
+const projectTitle =
+  "Implementation And Formal Verification of " +
+  "a Parallel Algorithm Based on Minimax " +
+  "Applied to a Game as a Case Study Using " +
+  "Concurrent Processes Algebra and Mcrl2.";
 
-const section = "Objetivos"
-const pag = 4
+const section = "Problem";
+const pag = 4;
 ---
 
 <Layout title={projectTitle}>
-	<main>
-		<Header></Header>
-		<Divider></Divider>
-		<aside class="hidden sm:block">
-			<div class="m-4">
-				<Search client:only></Search>
-				<ListBox selectedName = {section} client:only></ListBox>
-				<NextPag current = {pag}></NextPag>
-			</div>
-		</aside>
-		
-	</main>
-</Layout> 
+  <main>
+    <Header />
+    <Divider />
+    <div class="flex">
+      <aside class="hidden sm:block">
+        <div class="m-4">
+          <Search client:only />
+          <ListBox selectedName={section} client:only />
+          <NextPag current={pag} client:only />
+          <Home />
+        </div>
+      </aside>
+      <div>
+        <div class="m-8 mb-24 text-5xl">
+          <h1>Critical Systems Fails</h1>
+        </div>
+        <div class="m-8 text-5xl flex">
+          <CardObject
+            title="Therac-25 Incident"
+            years="1985-1987"
+            url_category="public/images/medicine-svgrepo-com.svg"
+            url_image="public/images/therac-machine.webp"
+			texts="text-xl"
+            client:only
+          />
+		  <CardObject
+		  title="The Patriot Missile Failure"
+		  years="1991"
+		  url_category="public/images/chevron-military-svgrepo-com.svg"
+		  url_image="public/images/patriot.webp"
+		  texts="text-sm"
+		  client:only
+		/>
+          <CardObject
+            title="Arianne 5 Fail"
+            years="1996"
+            url_category="public/images/space-module-svgrepo-com.svg"
+            url_image="public/images/arianne.jpg"
+			texts="text-xl"
+            client:only
+          />
+          <CardObject
+            title="Boeing 737 MAX Incidents"
+            years="2018-2024"
+            url_category="public/images/aeroplane-airport-svgrepo-com (4).svg"
+            url_image="public/images/bmax.webp"
+			texts="text-sm"
+            client:only
+          />
+        </div>
+		<div class="flex justify-center items-center w-full  ">
+			<ImagesShower
+				width=1000
+				alt="software testing"
+				url="public/images/timeline.svg"
+				class="w-1/2"
+				client:only
+		  	/>
+		</div>
+      </div>
+    </div>
+  </main>
+</Layout>

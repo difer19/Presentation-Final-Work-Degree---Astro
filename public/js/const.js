@@ -3,28 +3,24 @@
 export const itemsAgenda = [
     {
       number: "1.",
-      name: "Introduccion.",
+      name: "Introduction.",
       url: "/1"
     },
     {
       number: "2.",
-      name: "Planteamiento del Problema.",
-      url: "/2",
+      name: "Problem Statement.",
+      url: "/3",
     },
+
     {
       number: "3.",
-      name: "Justificacion.",
-      url: "/3",
+      name: "Goals.",
+      url: "/10",
     },
     {
       number: "4.",
-      name: "Objetivos.",
-      url: "/4",
-    },
-    {
-      number: "5.",
-      name: "Marco Teorico.",
-      url: "/5",
+      name: "Theoretical Framework.",
+      url: "/11",
     },
     {
       number: "6.",

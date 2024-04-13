@@ -5,16 +5,14 @@ import { itemsAgenda } from "../../public/js/const";
 
 export default function App(props) {
   var current = "";
-  if (props.selectedName == "Introduccion") {
+  if (props.selectedName == "Introduction") {
     current = "/1";
-  } else if (props.selectedName == "Problema") {
-    current = "/2";
-  } else if (props.selectedName == "Justificacion"){
+  } else if (props.selectedName == "Problem") {
     current = "/3";
-  } else if (props.selectedName == "Objetivos") {
-    current = "/4";
-  } else if (props.selectedName == "Marco") {
-    current = "/5";
+  } else if (props.selectedName == "Goals") {
+    current = "/10";
+  } else if (props.selectedName == "framework") {
+    current = "/11";
   } else if (props.selectedName == "Metodologia"){
     current = "/6";
   } else if (props.selectedName == "Resultados") {
