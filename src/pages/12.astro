@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ListBox from "../components/ListBox.jsx";
-import { Divider } from "@nextui-org/react";
+import { Divider, Link } from "@nextui-org/react";
 import Search from "../components/Search.jsx";
 import NextPag from "../components/NextPag.jsx";
 import Header from "../components/Header.astro";
@@ -9,9 +9,10 @@ import Home from "../components/Home.jsx";
 import ImagesShower from "../components/ImagesShower.jsx";
 
 const projectTitle =
-  "Implementación y verificación formal de un algoritmo paralelo basado \
-                        en Minmax aplicado a un juego como caso de estudio usando álgebra de \
-                        procesos concurrentes y mCRL2 ";
+  "Implementation And Formal Verification of " +
+  "a Parallel Algorithm Based on Minimax " +
+  "Applied to a Game as a Case Study Using " +
+  "Concurrent Processes Algebra and Mcrl2.";
 
 const section = "framework";
 const pag = 12;
@@ -32,15 +33,24 @@ const pag = 12;
       <div class="m-8 w-full">
         <h1 class="text-5xl">Parallel Computing</h1>
         <Divider />
-		<div class="ml-8 rounded-md border-black shadow-md p-4 md:w-[600px]">
-          <ImagesShower
-            width=600
-            height=600
-            alt="software testing"
-            url="./public/images/parallelism.png"
-            client:only
-          />
+        <div class="flex flex-col items-center justify-center">
+          <div class="ml-8 rounded-md border-black shadow-md p-4 w-4/6 ">
+            <ImagesShower
+              alt="software testing"
+              url="./public/images/parallelism.png"
+              client:only
+            />
+            <p>
+              Source : <Link
+                className="mt-4"
+                href="https://www.linkedin.com/pulse/evolution-concurrency-java-eric-kolotyluk/"
+                client:only
+                >Link</Link
+              >
+            </p>
+          </div>
         </div>
+       
       </div>
     </div>
   </main>

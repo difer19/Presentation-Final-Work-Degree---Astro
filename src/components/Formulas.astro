@@ -1,0 +1,13 @@
+---
+import katex from 'katex';
+
+const {formula} = Astro.props;
+
+// Renderiza la fórmula usando KaTeX
+var html = katex.renderToString(String.raw`${formula}`, {
+    throwOnError: false
+});
+---
+
+<!-- Usar set:html para insertar el HTML renderizado -->
+<span class="katex" set:html={html}></span>

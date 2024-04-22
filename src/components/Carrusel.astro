@@ -1,0 +1,97 @@
+---
+
+---
+
+<section id="gallery">
+  <div class="gallery-container">
+    <figure class="gallery-item">
+      <img src="/public/images/m1.png" alt="Imagen 1" />
+    </figure>
+    <figure class="gallery-item">
+      <img src="/public/images/m2.png" alt="Imagen 2" />
+    </figure>
+    <figure class="gallery-item">
+      <img src="/public/images/m3.png" alt="Imagen 3" />
+    </figure>
+    <!-- ... otras imágenes ... -->
+  </div>
+  <nav class="gallery-navigation">
+    <button class="nav-button prev-button">{"<-"}</button>
+    <button class="nav-button next-button">{"->"}</button>
+  </nav>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const prevButton = document.querySelector(".prev-button");
+    const nextButton = document.querySelector(".next-button");
+    const galleryContainer = document.querySelector(
+      ".gallery-container"
+    ) as HTMLElement; // Aserción de tipo a HTMLElement
+
+    if (prevButton && nextButton && galleryContainer) {
+      let currentIndex = 0;
+
+      prevButton.addEventListener("click", () => {
+        navigate(-1);
+      });
+
+      nextButton.addEventListener("click", () => {
+        navigate(1);
+      });
+
+      function navigate(direction: number) {
+        const galleryItems = document.querySelectorAll(".gallery-item");
+        const totalImages = galleryItems.length;
+
+        currentIndex = (currentIndex + direction + totalImages) % totalImages;
+        const offset = -currentIndex * 100;
+        galleryContainer.style.transform = `translateX(${offset}%)`; // Ahora es seguro acceder a `style`
+      }
+    } else {
+      console.log("Some elements did not load properly.");
+    }
+  });
+</script>
+
+<style>
+  #gallery {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .gallery-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .gallery-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    display: block;
+  }
+
+  /* Navegación del Slider */
+  .gallery-navigation {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -50px;
+  }
+
+  .nav-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+  }
+
+</style>

@@ -39,7 +39,7 @@ export default function App(props) {
         </CardBody>
       </Card>
     );
-  } else if (props.current == 15) {
+  } else if (props.current == 51) {
     return (
       <Card className="max-w-[261px] my-5 ">
         <CardBody>

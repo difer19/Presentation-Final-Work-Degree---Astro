@@ -1,17 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ListBox from "../components/ListBox.jsx";
-import { Divider } from "@nextui-org/react";
+import { Divider, Link } from "@nextui-org/react";
 import Search from "../components/Search.jsx";
 import NextPag from "../components/NextPag.jsx";
 import Header from "../components/Header.astro";
 import ImagesShower from "../components/ImagesShower.jsx";
 import Home from "../components/Home.jsx";
 
-const projectTitle = "Implementation And Formal Verification of " + 
-				"a Parallel Algorithm Based on Minimax " +
-				"Applied to a Game as a Case Study Using " +
-				"Concurrent Processes Algebra and Mcrl2."
+const projectTitle =
+  "Implementation And Formal Verification of " +
+  "a Parallel Algorithm Based on Minimax " +
+  "Applied to a Game as a Case Study Using " +
+  "Concurrent Processes Algebra and Mcrl2.";
 
 const section = "Introduction";
 const pag = 2;
@@ -27,22 +28,34 @@ const pag = 2;
           <Search client:only />
           <ListBox selectedName={section} client:only />
           <NextPag current={pag} client:only />
-          <Home></Home>
+          <Home />
         </div>
       </aside>
-      <div class="m-8 text-5xl">
+      <div class="m-8">
         <div class="my-10 mx-16 flex">
           <div class="mr-8 rounded-md border-black shadow-md p-4">
             <ImagesShower
-              width=350
+              width="350"
               alt="software testing"
               url="public/images/dependency.png"
               class="w-1/2"
               client:only
             />
+            <p>
+              Source : <Link
+                className="mt-4"
+                href="https://www.explainxkcd.com/wiki/index.php/2347:_Dependency"
+                client:only
+                >https://www.explainxkcd.com/wiki/index.php/2347:_Dependency</Link
+              >
+            </p>
           </div>
           <div class="content-center w-1/2">
-            <p class="text-2xl  align-middle">"Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves."</p>
+            <p class="text-2xl align-middle">
+              "Most software today is very much like an Egyptian pyramid with
+              millions of bricks piled on top of each other, with no structural
+              integrity, but just done by brute force and thousands of slaves."
+            </p>
             <p class="text-2xl text-right align-middle mt-2">Alan Kay</p>
           </div>
         </div>

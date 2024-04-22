@@ -1,5 +1,3 @@
-
-
 export const itemsAgenda = [
     {
       number: "1.",
@@ -23,23 +21,28 @@ export const itemsAgenda = [
       url: "/11",
     },
     {
+      number: "5.",
+      name: "Methodology.",
+      url: "/22",
+    },
+    {
       number: "6.",
-      name: "Metodologia.",
-      url: "/6",
+      name: "Development ",
+      url: "/24",
     },
     {
       number: "7.",
-      name: "Resultados de la Investigacion.",
-      url: "/7",
+      name: "Specification and Validation",
+      url: "/35",
     },
     {
       number: "8.",
-      name: "Conclusiones",
-      url: "/8",
+      name: "Conclusions",
+      url: "/50",
     },
     {
       number: "9.",
-      name: "Recomendaciones.",
-      url: "/9",
+      name: "Recommendations",
+      url: "/51",
     },
   ];

@@ -13,14 +13,16 @@ export default function App(props) {
     current = "/10";
   } else if (props.selectedName == "framework") {
     current = "/11";
-  } else if (props.selectedName == "Metodologia"){
-    current = "/6";
-  } else if (props.selectedName == "Resultados") {
-    current = "/7";
-  } else if (props.selectedName == "Conclusiones"){
-    current = "/8";
-  } else if (props.selectedName == "Recomendaciones") {
-    current = "/9";
+  } else if (props.selectedName == "Methodology"){
+    current = "/22";
+  } else if (props.selectedName == "dev") {
+    current = "/24";
+  } else if (props.selectedName == "spec") {
+    current = "/35";
+  } else if (props.selectedName == "conc"){
+    current = "/50";
+  } else if (props.selectedName == "rec") {
+    current = "/51";
   }
 
   const [selectedKeys, setSelectedKeys] = React.useState(new Set([current]));
