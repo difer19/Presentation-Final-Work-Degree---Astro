@@ -1,10 +1,12 @@
 import React from "react";
 import { Card, CardBody, Button } from "@nextui-org/react";
 import { ArrowRight, ArrowLeft } from "@geist-ui/react-icons";
+import Aknow from "../pages/aknow.astro";
 
 export default function App(props) {
   var next = props.current + 1;
   var prev = props.current - 1;
+  var aknowq = "aknow"
 
   if (props.current == 1) {
     return (
@@ -14,7 +16,7 @@ export default function App(props) {
             <a href={prev}>
               <Button
                 disabled
-                className="bg-sky-500 hover:bg-purple-300 mx-4"
+                className="bg-blue-950 hover:bg-blue-300 mx-4"
                 isIconOnly
                 color="primary"
                 client:visible
@@ -27,7 +29,7 @@ export default function App(props) {
 
             <a href={next}>
               <Button
-                className="bg-sky-500 hover:bg-purple-300 mx-4"
+                className="bg-blue-950 hover:bg-blue-300 mx-4"
                 isIconOnly
                 color="primary"
                 client:visible
@@ -46,7 +48,7 @@ export default function App(props) {
           <div className="flex justify-center items-center">
             <a href={prev}>
               <Button
-                className="bg-sky-500 hover:bg-purple-300 mx-4"
+                className="bg-blue-950 hover:bg-blue-300 mx-4"
                 isIconOnly
                 color="primary"
                 client:visible
@@ -57,10 +59,9 @@ export default function App(props) {
 
             <h1 className="mx-8">{props.current}</h1>
 
-            <a href={next}>
+            <a href={aknowq}>
               <Button
-                disabled
-                className="bg-sky-500 hover:bg-purple-300 mx-4"
+                className="bg-blue-950 hover:bg-blue-300 mx-4"
                 isIconOnly
                 color="primary"
                 client:visible
@@ -79,7 +80,7 @@ export default function App(props) {
           <div className="flex justify-center items-center">
             <a href={prev}>
               <Button
-                className="bg-sky-500 hover:bg-purple-300 mx-4"
+                className="bg-blue-950 hover:bg-blue-300 mx-4"
                 isIconOnly
                 color="primary"
                 client:visible
@@ -92,7 +93,7 @@ export default function App(props) {
 
             <a href={next}>
               <Button
-                className="bg-sky-500 hover:bg-purple-300 mx-4"
+                className="bg-blue-950 hover:bg-blue-300 mx-4"
                 isIconOnly
                 color="primary"
                 client:visible

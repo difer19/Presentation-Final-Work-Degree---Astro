@@ -17,10 +17,9 @@ const { title } = Astro.props;
 
     <title>{title}</title>
   </head>
-  <body>
+  <body >
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.0/dist/katex.min.css">
-
     <slot />
   </body>
 </html>
@@ -33,7 +32,6 @@ const { title } = Astro.props;
       45deg,
       rgb(var(--accent)),
       rgb(var(--accent-light)) 30%,
-      white 60%
     );
   }
 
@@ -54,8 +52,6 @@ const { title } = Astro.props;
 
   html {
     font-family: "Inder";
-    /* background: #DAE1F5; */
-    background: white;
     background-size: 224px;
   }
   code {

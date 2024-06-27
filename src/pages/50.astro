@@ -11,7 +11,7 @@ const projectTitle =
   "Implementation And Formal Verification of " +
   "a Parallel Algorithm Based on Minimax " +
   "Applied to a Game as a Case Study Using " +
-  "Concurrent Processes Algebra and Mcrl2.";
+  "Concurrent Processes Algebra and mCRL2.";
 
 const section = "conc";
 const pag = 50;
@@ -32,7 +32,20 @@ const pag = 50;
       <div class="m-8 w-full">
         <h1 class="text-5xl">Conclusions</h1>
         <Divider />
-        <div class="mr-8 flex flex-col items-center justify-center"></div>
+        <div class="mr-8 flex flex-col items-center justify-center">
+          <ul style="list-style: disc;" class="pl-5">
+            <li>
+            <p>Parallel computing improves the performance of algorithms such as Minimax, but their execution at large depths remains impractical due to high execution times.</p>
+            </li>
+            <li>
+            <p>Process algebra and mCRL2 facilitate formal modeling and graphical visualization of complex behavior, allowing valuable information to be deduced.</p>
+            </li>
+            <li>
+            <p>Visual verification of algorithm behavior shows consistency with expectations up to depths of 3, but reveals errors at level 0, highlighting the usefulness of formal methods for identifying non-obvious problems.</p>
+            </li>
+            </ul>
+            
+        </div>
       </div>
     </div>
   </main>

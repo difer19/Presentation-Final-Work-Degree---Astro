@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ListBox from "../components/ListBox.jsx";
-import { Divider } from "@nextui-org/react";
+import { Divider, Link } from "@nextui-org/react";
 import Search from "../components/Search.jsx";
 import NextPag from "../components/NextPag.jsx";
 import Header from "../components/Header.astro";
@@ -12,7 +12,7 @@ const projectTitle =
   "Implementation And Formal Verification of " +
   "a Parallel Algorithm Based on Minimax " +
   "Applied to a Game as a Case Study Using " +
-  "Concurrent Processes Algebra and Mcrl2.";
+  "Concurrent Processes Algebra and mCRL2.";
 
 const section = "framework";
 const pag = 20;
@@ -39,6 +39,8 @@ const pag = 20;
                   url="public/images/mcrl2.png"
                   client:only
                 />
+                <p>Source : 
+                  <Link className="mt-4" href="https://www.mcrl2.org/web/index.html" client:only>Link</Link> </p>
               </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function Item(props) {
           </div>
           <a href={props.url}>
             <Button
-              className="bg-purple-500 hover:bg-purple-300"
+              className="bg-blue-950 hover:bg-blue-300 mx-4"
               isIconOnly
               color="primary"
               client:visible

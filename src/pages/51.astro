@@ -11,7 +11,7 @@ const projectTitle =
   "Implementation And Formal Verification of " +
   "a Parallel Algorithm Based on Minimax " +
   "Applied to a Game as a Case Study Using " +
-  "Concurrent Processes Algebra and Mcrl2.";
+  "Concurrent Processes Algebra and mCRL2.";
 
 const section = "rec";
 const pag = 51;
@@ -32,7 +32,13 @@ const pag = 51;
       <div class="m-8 w-full">
         <h1 class="text-5xl">Recommendations</h1>
         <Divider />
-        <div class="mr-8 flex flex-col items-center justify-center"></div>
+        <div class="mr-8 flex flex-col items-center justify-center">
+          <ul style="list-style: disc;" class="pl-5">
+            <li>Parallelism techniques have improved the execution times of the Minimax algorithm, but it is recommended to explore additional optimization techniques to further deepen the game tree in acceptable times, such as implementing different parallelism approaches or refining the heuristic function.</li>
+            <li>It is crucial to master both the tools and the theory related to formal verification; therefore, the importance of training in these aspects is emphasized to face the challenges of verifying and developing complex and concurrent systems.</li>
+            <li>For future work, it is suggested to investigate the performance of current implementations in different games and to explore alternative formal methods with higher expressive capability to verify the concepts presented in this study. In addition, it is recommended to create a more detailed model in mCRL2 and to consider the incorporation of recursion within the parallel operator.</li>
+            </ul>
+        </div>
       </div>
     </div>
   </main>

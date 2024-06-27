@@ -11,16 +11,16 @@ import Home from "../components/Home.jsx";
 const projectTitle = "Implementation And Formal Verification of " + 
 				"a Parallel Algorithm Based on Minimax " +
 				"Applied to a Game as a Case Study Using " +
-				"Concurrent Processes Algebra and Mcrl2."
+				"Concurrent Processes Algebra and mCRL2."
 
 const section = "Introduction";
 const pag = 1;
 ---
 
 <Layout title={projectTitle}>
-  <main>
+  <main >
     <Header />
-    <div class="flex">
+    <div class="flex ">
       <aside class="hidden sm:block">
         <div class="m-4">
           <Search client:only />
@@ -39,7 +39,8 @@ const pag = 1;
               url="public/images/software_complexity.png"
               client:only
             />
-            <p>Source : <Link className="mt-4" href="http://themetapicture.com/the-life-of-a-software-engineer/" client:only>http://themetapicture.com/the-life-of-a-software-engineer/</Link> </p>
+            <p>Source : 
+              <Link className="mt-4" href="http://themetapicture.com/the-life-of-a-software-engineer/" client:only>http://themetapicture.com/the-life-of-a-software-engineer/</Link> </p>
             
           </div>
           <div class="content-center">
@@ -53,6 +54,8 @@ const pag = 1;
 </Layout>
 
 <style>
+
+
   #write {
     max-width: 860px;
     margin: 0 auto;
@@ -273,6 +276,7 @@ const pag = 1;
   }
 
   .md-fences {
+    
     margin-bottom: 15px;
     margin-top: 15px;
     padding-top: 8px;
